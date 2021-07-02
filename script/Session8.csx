@@ -105,11 +105,16 @@ public class TreinoFocadoA{
 public class Pessoa{
     public string nome { get; set; }
     public DateTime nascimento { get; set; }
+
+    public override string ToString()
+    {
+        return "(" + nome + ", " + nascimento.ToString("dd/MM/yy") + ")";
+    }
 }
 
 public class TreinoFocadoB{
     
-    
+
     public List<DateTime> UltimoDia (List<DateTime> datas)
     {
         List<DateTime> ultimoDia = new List<DateTime>();
@@ -165,11 +170,40 @@ public class Pessoa_c{
     public string Nome { get; set; }
     public string Cidade { get; set; }
     public DateTime Nascimento { get; set; }
+
+    public override string ToString()
+    {
+        return "(" + Nome + ", " + Nascimento.ToString("dd/MM/yy") + ")";
+    }
 }
 
 public class TreinoFocadoC{
     public string SepararLetras(string frase)
     {
-        return frase;
+        List<char> letras = new List<char>();
+        foreach(char item in frase)
+        {
+            letras.Add(item);
+        }
+        return string.Join("-", letras);
+    }
+
+    //public List<int> CodigoAscii(string frase)
+
+    public bool TodasVogais(string frase)
+    {
+        bool todasvg = true;
+        foreach(char item in frase)
+        {
+            bool e_vogal = item == 'a' || item == 'e' || item == 'i' || item == 'o' || item == 'u' || item == 'A' || item == 'E' || item == 'I' || item == 'O' || item == 'U';
+            if(!e_vogal == true)
+            {
+                todasvg = false;
+
+                break;
+            }
+        }
+        
+        return todasvg;
     }
 }
