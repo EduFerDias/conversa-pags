@@ -529,4 +529,4 @@ Console.WriteLine("Treino C x2: "+ tC.Iverter(c2));
 Console.WriteLine("Treino C x3: "+ tC.TodasVogais(c1));
 Console.WriteLine("Treino C x4/x5: "+ string.Join("-", tC.UltimosNomes(TesteC2)));
 Console.WriteLine("Treino C x6: "+ tC.ApenasCoresPrimaeias(TesteC0));
-Console.WriteLine("Treino C x7: "+ tC.SenhaForte("Seas00##");
+Console.WriteLine("Treino C x7: "+ tC.SenhaForte("Seas00##"));

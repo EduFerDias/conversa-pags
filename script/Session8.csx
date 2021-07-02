@@ -61,7 +61,7 @@ public class TreinoFocadoA{
 
             if(numeros[item] >= numeros[ante])
             {
-                maior = numeros[item]
+                maior = numeros[item];
             }            
         }
         return maior;
