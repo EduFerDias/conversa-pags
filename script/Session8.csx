@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Retangulos{
+public class Retangulo{
     public double basee { get; set; }
     public double altura { get; set; }
 }
@@ -18,8 +18,8 @@ public class TreinoFocadoA{
         int soma = 0;
         foreach (int item in numeros)
         {
-            if(numeros[item] % 2 != 0)
-            soma += numeros[item];
+            if(item % 2 != 0)
+            soma += item;
         }
         return soma;
     }
@@ -29,7 +29,7 @@ public class TreinoFocadoA{
         List<int> resposta = new List<int>();
         foreach(int item in numeros)
         {
-            int cubo = numeros[item] * numeros[item] * numeros[item];
+            int cubo = item * item * item;
             resposta.Add(cubo);
         }
         return resposta;
@@ -40,11 +40,11 @@ public class TreinoFocadoA{
         List<double> raizes = new List<double>();
         foreach(int item in numeros)
         {
-            if(Math.Pow(Math.Sqrt(numeros[item]), 2) != numeros[item])
+            if(Math.Pow(Math.Sqrt(item), 2) != item)
             throw new Exception("Um dos numeros inseridos não possui raiz");
 
 
-            raizes.Add(Math.Sqrt(numeros[item]));
+            raizes.Add(Math.Sqrt(item));
         }
         return raizes;
     }
@@ -55,14 +55,9 @@ public class TreinoFocadoA{
 
         foreach(int item in numeros)
         {
-            int ante = 0;
-            if(item > 0)
-            ante = item - 1;
-
-            if(numeros[item] >= numeros[ante])
-            {
-                maior = numeros[item];
-            }            
+            if(item >= maior)
+                maior = item;
+     
         }
         return maior;
     }
@@ -76,5 +71,33 @@ public class TreinoFocadoA{
             somas += numeros[item];
         }
         return somas / numeros.Count;
+    }
+
+    public List<double> Media_Notas (List<Notas> alunos)
+    {
+        List<double> medias = new List<double>();
+        foreach (Notas item in alunos)
+        {
+           Notas nota = item;
+            double somas = nota.nota1 + nota.nota2 + nota.nota3;
+            medias.Add(somas / 3);   
+        }
+        return medias;
+    }
+
+    private double AreaRetangulo(Retangulo ret)
+    {
+        return ret.basee * ret.altura;
+    }
+
+    public List<double> AreaRetangulos(List<Retangulo> retangulos)
+    {
+        List<double> areas=  new List<double>();
+        foreach (Retangulo item in retangulos)
+        {
+            Retangulo ret = item;
+            areas.Add(AreaRetangulo(ret));
+        }
+        return areas;
     }
 }
