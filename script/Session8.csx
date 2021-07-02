@@ -66,9 +66,9 @@ public class TreinoFocadoA{
     {
         List<double> medias = new List<double>();
         double somas = 0;
-        foreach(int item in numeros)
+        foreach(double item in numeros)
         {
-            somas += numeros[item];
+            somas += item;
         }
         return somas / numeros.Count;
     }
