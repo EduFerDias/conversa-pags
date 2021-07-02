@@ -214,4 +214,22 @@ public class TreinoFocadoC{
         
         return todasvg;
     }
+
+    public string Alternado(Pessoa_c fulano)
+    {
+        string Alternado =  string.Empty;
+        foreach (char letra in fulano.Nome)
+        {
+            string Frase = string.Empty;
+            int alt = 0;
+            alt++;
+
+            if(alt % 2 != 0)
+            Alternado += Convert.ToString(letra).ToUpper();
+            else
+            Alternado += Convert.ToString(letra).ToLower();
+        }
+
+        return Alternado;
+    }
 }
