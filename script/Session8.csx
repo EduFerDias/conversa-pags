@@ -78,7 +78,7 @@ public class TreinoFocadoA{
         List<double> medias = new List<double>();
         foreach (Notas item in alunos)
         {
-           Notas nota = item;
+            Notas nota = item;
             double somas = nota.nota1 + nota.nota2 + nota.nota3;
             medias.Add(somas / 3);   
         }
@@ -100,4 +100,72 @@ public class TreinoFocadoA{
         }
         return areas;
     }
+}
+
+public class Pessoa{
+    public string nome { get; set; }
+    public DateTime nascimento { get; set; }
+}
+
+public class TreinoFocadoB{
+    
+    public List<DateTime> UltimoDia (List<DateTime> datas)
+    {
+        List<DateTime> ultimoDia = new List<DateTime>();
+        foreach (DateTime item in datas)
+            {
+                ultimoDia.Add(item.AddMonths(1).AddDays(item.Day));
+            }
+        return ultimoDia;
+    }
+
+    public DateTime MaiorData(List<DateTime> datas)
+    {
+        DateTime maior = new DateTime();
+        foreach (DateTime item in datas)
+        {
+            if(maior <= item)
+            maior = item;
+        }
+        return maior;
+    }
+
+    public List<Pessoa> FiltrarMaiores(List<Pessoa> pessoas)
+    {
+        List<Pessoa> Maiores = new List<Pessoa>();
+        foreach (Pessoa item in pessoas)
+        {
+            if(DateTime.Now.AddYears(-18) > item.nascimento)
+            {
+                Maiores.Add(item);
+            }
+        }
+        return Maiores;
+    }
+    
+    public bool TodosMaiores ( List<Pessoa> grupo)
+    {
+        bool tdsMaiores = true;
+        foreach (Pessoa item in grupo)
+        {
+            if(item.nascimento > DateTime.Now.AddYears(-18))
+            {
+                tdsMaiores = false;
+
+                break;
+            }
+        }
+        return tdsMaiores;
+    }
+}
+
+
+public class Pessoa_c{
+    public string Nome { get; set; }
+    public string Cidade { get; set; }
+    public DateTime Nascimento { get; set; }
+}
+
+public class TreinoFocadoC{
+    
 }
