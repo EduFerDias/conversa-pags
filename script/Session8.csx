@@ -188,7 +188,15 @@ public class TreinoFocadoC{
         return string.Join("-", letras);
     }
 
-    //public List<int> CodigoAscii(string frase)
+    public List<int> CodigoAscii(string frase)
+    {
+        List<int> ascii = new List<int>();
+        foreach (char item in frase)
+        {
+            ascii.Add(Convert.ToInt32(item));
+        }
+        return ascii;
+    }
 
     public bool TodasVogais(string frase)
     {
