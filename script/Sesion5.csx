@@ -346,7 +346,7 @@ public class Treino_focadoB
     }
 
 
-	public string proximo_sinal(semaforo S_in)
+	public semaforo proximo_sinal(semaforo S_in)
 	{
 		string estado = string.Empty;
 		if(S_in.Luz_vermelha_acesa == true)
@@ -586,4 +586,5 @@ public class Treino_focadoC
 		return $"{dados.nome} você nasceu ha {dias_vividos} dias, em uma {periodo} do dia {dados.Nascimento.Day} de {nm_mes}({n_trimestre}° trimestre) de {dados.Nascimento.Year}. Seu Signo é de {signo}";
 
     }
+}
 }

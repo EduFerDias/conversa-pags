@@ -29,7 +29,8 @@ public class TreinoFocadoA{
         List<int> resposta = new List<int>();
         foreach(int item in numeros)
         {
-            resposta.Add(Math.Pow(numeros[item], 3));
+            int cubo = numeros[item] * numeros[item] * numeros[item];
+            resposta.Add(cubo);
         }
         return resposta;
     
@@ -54,7 +55,7 @@ public class TreinoFocadoA{
 
         foreach(int item in numeros)
         {
-            ante = 0;
+            int ante = 0;
             if(item > 0)
             ante = item - 1;
 
@@ -63,10 +64,11 @@ public class TreinoFocadoA{
                 maior = numeros[item]
             }            
         }
+        return maior;
     }
 
-    public double Media (List<double> media)
-    {
+    //public double Media (List<double> media)
+    //{
         
-    }
+   // }
 }
