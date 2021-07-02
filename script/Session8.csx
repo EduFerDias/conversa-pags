@@ -232,4 +232,30 @@ public class TreinoFocadoC{
 
         return Alternado;
     }
+
+    public string Invertido(string frase)
+    {
+        string Invertido = string.Empty;
+
+        foreach (char item in frase)
+        {
+            Invertido = item + Invertido;
+        }
+        return Invertido;
+    }
+
+    public bool Palindromo(string frase)
+    {
+        string invertido = string.Empty;
+        foreach (char item in frase)
+        {
+            invertido = item + invertido;
+        }
+        bool e_palidromo = false;
+        if(frase == invertido)
+        {
+            e_palidromo = true;
+        }
+        return e_palidromo;
+    }
 }
