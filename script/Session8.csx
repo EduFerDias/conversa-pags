@@ -109,6 +109,7 @@ public class Pessoa{
 
 public class TreinoFocadoB{
     
+    
     public List<DateTime> UltimoDia (List<DateTime> datas)
     {
         List<DateTime> ultimoDia = new List<DateTime>();
@@ -167,5 +168,8 @@ public class Pessoa_c{
 }
 
 public class TreinoFocadoC{
-    
+    public string SepararLetras(string frase)
+    {
+        return frase;
+    }
 }
