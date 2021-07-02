@@ -67,8 +67,14 @@ public class TreinoFocadoA{
         return maior;
     }
 
-    //public double Media (List<double> media)
-    //{
-        
-   // }
+    public double Media(List<double> numeros)
+    {
+        List<double> medias = new List<double>();
+        double somas = 0;
+        foreach(int item in numeros)
+        {
+            somas += numeros[item];
+        }
+        return somas / numeros.Count;
+    }
 }
