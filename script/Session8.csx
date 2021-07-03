@@ -145,6 +145,7 @@ try
     Console.WriteLine("TreinoA x5: " + tA.Media(tA_double));
     Console.WriteLine("TreinoA x6: " + string.Join(", ",tA.Media_Notas(tA_notas)));
     Console.WriteLine("TreinoA x7/x8: " + string.Join(", ",tA.AreaRetangulos(tA_Retangulos)));
+    Console.WriteLine("-----------------------------------");
 }
 catch(Exception ex)
 {
@@ -252,6 +253,8 @@ try
     Console.WriteLine("TreinoB x2: " + tB.MaiorData(tB_Date).ToString("dd/MM/yyyy"));
     Console.WriteLine("TreinoB x3: " + string.Join(", ", tB.FiltrarMaiores(tB_Pessoa)));
     Console.WriteLine("TreinoB x4: " + tB.TodosMaiores(tB_Pessoa));
+    Console.WriteLine("-----------------------------------");
+
 }
 catch (Exception ex)
 {
@@ -309,11 +312,11 @@ public class TreinoFocadoC{
         return todasvg;
     }
 
-    public string Alternado(Pessoa_c fulano)
+    public string Alternado(Pessoa_c pessoa)
     {
         string Alternado =  string.Empty;
         int alt = 0;
-        foreach (char letra in fulano.Nome)
+        foreach (char letra in pessoa.Nome)
         {
             string Frase = string.Empty;
             alt++;
@@ -353,3 +356,23 @@ public class TreinoFocadoC{
         return e_palidromo;
     }
 }
+
+Pessoa_c tC_pessoa = new Pessoa_c();
+tC_pessoa.Nome = "Joaquim Elias André Moreira";
+tC_pessoa.Nascimento = new DateTime(1946, 03, 22);
+tC_pessoa.Cidade = "Palmas, TO";
+
+string frase = "A prece não se resolve no muito falar, e sim no muito sentir.";
+TreinoFocadoC tC = new TreinoFocadoC();
+ try
+ {
+     Console.WriteLine("TreinoC x1: " + tC.SepararLetras(frase));
+     Console.WriteLine("TreinoC x2: " + tC.TodasVogais("Eae"));
+     Console.WriteLine("TreinoC x3: " + string.Join(", ", tC.CodigoAscii("Shrek")));
+     Console.WriteLine("TreinoC x4: " + tC.Invertido("orB"));
+     Console.WriteLine("TreinoC x5: " + tC.Palindromo("gollog"));
+ }
+ catch
+ {
+
+ }
