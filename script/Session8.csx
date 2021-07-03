@@ -102,6 +102,55 @@ public class TreinoFocadoA{
     }
 }
 
+TreinoFocadoA tA =  new TreinoFocadoA();
+Retangulo r1 = new Retangulo();
+r1.altura = 6;
+r1.basee = 8;
+
+Retangulo r2 = new Retangulo();
+r2.altura = 7;
+r2.basee = 14;
+
+Retangulo r3 = new Retangulo();
+r3.altura = 5;
+r3.basee = 20;
+
+Notas a1 = new Notas();
+a1.nota1 = 8;
+a1.nota2 = 7;
+a1.nota3 = 6;
+
+Notas a2 = new Notas();
+a2.nota1 = 9;
+a2.nota2 = 4;
+a2.nota3 = 5;
+
+Notas a3 = new Notas();
+a3.nota1 = 5;
+a3.nota2 = 9;
+a3.nota3 = 7;
+
+List<Notas> tA_notas = new List<Notas>() {a1, a2, a3};
+List<Retangulo> tA_Retangulos = new List<Retangulo>() {r1, r2, r3};
+
+List<int> tA_int = new List<int>(){2, 4, 5, 9, 3, 10};
+List<double> tA_double = new List<double>(){9, 25, 64, 100};
+
+try
+{
+    Console.WriteLine("TreinoA x1: " + tA.somar_impares(tA_int));
+    Console.WriteLine("TreinoA x2: " + string.Join(", ", tA.CalcularCubo(tA_int)));
+    Console.WriteLine("TreinoA x3: " + string.Join(", ",tA.Calcular_Raiz(tA_double)));
+    Console.WriteLine("TreinoA x4: " + tA.MaiorNumero(tA_int));
+    Console.WriteLine("TreinoA x5: " + tA.Media(tA_double));
+    Console.WriteLine("TreinoA x6: " + string.Join(", ",tA.Media_Notas(tA_notas)));
+    Console.WriteLine("TreinoA x7/x8: " + string.Join(", ",tA.AreaRetangulos(tA_Retangulos)));
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Erro: " + ex.Message);
+}
+
 public class Pessoa{
     public string nome { get; set; }
     public DateTime nascimento { get; set; }
@@ -218,10 +267,10 @@ public class TreinoFocadoC{
     public string Alternado(Pessoa_c fulano)
     {
         string Alternado =  string.Empty;
+        int alt = 0;
         foreach (char letra in fulano.Nome)
         {
             string Frase = string.Empty;
-            int alt = 0;
             alt++;
 
             if(alt % 2 != 0)
