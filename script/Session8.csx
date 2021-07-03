@@ -169,7 +169,7 @@ public class TreinoFocadoB{
         List<DateTime> ultimoDia = new List<DateTime>();
         foreach (DateTime item in datas)
             {
-                ultimoDia.Add(item.AddMonths(1).AddDays(item.Day));
+                ultimoDia.Add(item.AddMonths(1).AddDays(-item.Day));
             }
         return ultimoDia;
     }
@@ -195,7 +195,7 @@ public class TreinoFocadoB{
                 Maiores.Add(item);
             }
             if(item.nascimento > DateTime.Now)
-                throw new Exception("Uma das foi declarada com nascida no futuro, favor verficar as datas");
+                throw new Exception("Uma das pessoas foi declarada com nascida no futuro, favor verficar as datas");
             if(item.nascimento < DateTime.Now.AddYears(-150))
                 throw new Exception("Uma das pessoas é velha demais para estar viva, favor verficar as datas");
             // sim, eu pesquisei e a pessoa mais velha a ter existido morreu com 122 anos, em 1997.
@@ -216,7 +216,7 @@ public class TreinoFocadoB{
             }
 
             if(item.nascimento > DateTime.Now)
-                throw new Exception("Uma das foi declarada com nascida no futuro, favor verficar as datas");
+                throw new Exception("Uma das pessoas foi declarada com nascida no futuro, favor verficar as datas");
             if(item.nascimento < DateTime.Now.AddYears(-150))
                 throw new Exception("Uma das pessoas é velha demais para estar viva, favor verficar as datas");
         }
@@ -240,7 +240,7 @@ p2.nascimento = new DateTime(1990, 02, 01);
 
 Pessoa p3 = new Pessoa();
 p3.nome = "Cristiano";
-p3.nascimento = new DateTime(2005, 09, 12);
+p3.nascimento = new DateTime(2002, 09, 12);
 
 List<DateTime> tB_Date = new List<DateTime>(){d1, d2, d3};
 List<Pessoa> tB_Pessoa = new List<Pessoa>(){p1, p2, p3};
@@ -248,10 +248,10 @@ List<Pessoa> tB_Pessoa = new List<Pessoa>(){p1, p2, p3};
 TreinoFocadoB tB =  new TreinoFocadoB();
 try
 {
-    Console.WriteLine( string.Join("-", tB.UltimoDia(tB_Date)));
-    Console.WriteLine( tB.MaiorData(tB_Date));
-    Console.WriteLine( string.Join(", ", tB.FiltrarMaiores(tB_Pessoa)));
-    Console.WriteLine( tB.TodosMaiores(tB_Pessoa));
+    Console.WriteLine("TreinoB x1: " + string.Join(" - ", tB.UltimoDia(tB_Date)));
+    Console.WriteLine("TreinoB x2: " + tB.MaiorData(tB_Date).ToString("dd/MM/yyyy"));
+    Console.WriteLine("TreinoB x3: " + string.Join(", ", tB.FiltrarMaiores(tB_Pessoa)));
+    Console.WriteLine("TreinoB x4: " + tB.TodosMaiores(tB_Pessoa));
 }
 catch (Exception ex)
 {
