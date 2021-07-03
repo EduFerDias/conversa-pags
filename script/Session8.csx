@@ -194,6 +194,11 @@ public class TreinoFocadoB{
             {
                 Maiores.Add(item);
             }
+            if(item.nascimento > DateTime.Now)
+                throw new Exception("Uma das foi declarada com nascida no futuro, favor verficar as datas");
+            if(item.nascimento < DateTime.Now.AddYears(-150))
+                throw new Exception("Uma das pessoas é velha demais para estar viva, favor verficar as datas");
+            // sim, eu pesquisei e a pessoa mais velha a ter existido morreu com 122 anos, em 1997.
         }
         return Maiores;
     }
@@ -209,9 +214,49 @@ public class TreinoFocadoB{
 
                 break;
             }
+
+            if(item.nascimento > DateTime.Now)
+                throw new Exception("Uma das foi declarada com nascida no futuro, favor verficar as datas");
+            if(item.nascimento < DateTime.Now.AddYears(-150))
+                throw new Exception("Uma das pessoas é velha demais para estar viva, favor verficar as datas");
         }
         return tdsMaiores;
     }
+}
+
+
+
+DateTime d1 = new DateTime(2002, 07, 11);
+DateTime d2 = new DateTime(2018, 07, 14);
+DateTime d3 = new DateTime(2014, 10, 12);
+
+Pessoa p1 = new Pessoa();
+p1.nome = "Eusebio";
+p1.nascimento = new DateTime(1972, 05, 30);
+
+Pessoa p2 = new Pessoa();
+p2.nome = "Maldini";
+p2.nascimento = new DateTime(1990, 02, 01);
+
+Pessoa p3 = new Pessoa();
+p3.nome = "Cristiano";
+p3.nascimento = new DateTime(2005, 09, 12);
+
+List<DateTime> tB_Date = new List<DateTime>(){d1, d2, d3};
+List<Pessoa> tB_Pessoa = new List<Pessoa>(){p1, p2, p3};
+
+TreinoFocadoB tB =  new TreinoFocadoB();
+try
+{
+    Console.WriteLine( string.Join("-", tB.UltimoDia(tB_Date)));
+    Console.WriteLine( tB.MaiorData(tB_Date));
+    Console.WriteLine( string.Join(", ", tB.FiltrarMaiores(tB_Pessoa)));
+    Console.WriteLine( tB.TodosMaiores(tB_Pessoa));
+}
+catch (Exception ex)
+{
+    
+    Console.WriteLine(ex.Message);
 }
 
 
