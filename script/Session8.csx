@@ -369,10 +369,11 @@ TreinoFocadoC tC = new TreinoFocadoC();
      Console.WriteLine("TreinoC x1: " + tC.SepararLetras(frase));
      Console.WriteLine("TreinoC x2: " + tC.TodasVogais("Eae"));
      Console.WriteLine("TreinoC x3: " + string.Join(", ", tC.CodigoAscii("Shrek")));
-     Console.WriteLine("TreinoC x4: " + tC.Invertido("orB"));
-     Console.WriteLine("TreinoC x5: " + tC.Palindromo("gollog"));
+     Console.WriteLine("TreinoC x4: " + tC.Alternado(tC_pessoa));
+     Console.WriteLine("TreinoC x5: " + tC.Invertido("orB"));
+     Console.WriteLine("TreinoC x6: " + tC.Palindromo("gollog"));
  }
- catch
+ catch(Exception ex)
  {
-
+     Console.WriteLine(ex.Message);
  }
