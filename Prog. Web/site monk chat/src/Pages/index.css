@@ -12,18 +12,20 @@ body{
     src: url("../assets/MontSerrat/Montserrat-Regular.ttf");
 }
 
+
+
 .Faixa1{
     background-color: #583BBF;
-    height: 100vh;
-    padding: 1.625em 2.875em;
+    padding: 2em 2em 2.1em;
 }
 
 .cabecalho{
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     font-family: Monteserrat-Bold;
-    margin-bottom: 56px;
+    margin-bottom: 36px;
 }
 
 .hr-cab{
@@ -46,6 +48,10 @@ body{
     display: flex;
     flex-direction: row;
     background-color: rgba(0, 0, 0 , 0.12);
+
+    padding: 0px 51px 48px;
+    margin-left: 31px;
+
 }
 
 .room-msg{
@@ -76,13 +82,11 @@ body{
     border: none;
 }
 
-.info-area{
-    padding: 0px 52px 0px 48px;
-}
-
 .refresh{
     display: flex;
     flex-direction: row-reverse;
+
+    transition: 0.5s;
 }
 
 .buttons{
@@ -103,6 +107,8 @@ body{
     margin: 0px 3.5px;
     font: 16px;
     line-height: 20px;
+
+    transition: 0.5s;
 }
 
 .room-name{
@@ -158,7 +164,6 @@ body{
 .msg-area button{
     text-align: right;
     margin-left: 190px;
-    margin-bottom: 51px;
 }
 
 .chat{
@@ -167,8 +172,10 @@ body{
     background: rgba(192, 65, 224, 0.19);
     border-radius: 3px;
 
-    width:830px;
-    height: 478px;
+    width: 938px;
+    height: 438px;
+
+    padding: 21px 0px 0px 26px;
 }
 
 .chat-area{
@@ -180,12 +187,22 @@ body{
 }
 
 .message{
-    display: flex;
-    flex-direction: row;
     color: white;
     font-family: Monteserrat-regular;
+    margin-bottom: 11px;
 }
 
 .name{
     font-family: Monteserrat-Bold;
+}
+
+.send:hover, .buttons button:hover{
+ background-color: #3b97a1;
+}
+
+.refresh svg{
+    transition: 1.2s;
+}
+.refresh svg:hover{
+    transform: rotate(360deg);
 }
