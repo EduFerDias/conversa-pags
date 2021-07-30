@@ -1,0 +1,191 @@
+body{
+    margin: 0px;
+}
+
+@font-face {
+    font-family: Monteserrat-Bold;
+    src: url("../assets/MontSerrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: Monteserrat-regular;
+    src: url("../assets/MontSerrat/Montserrat-Regular.ttf");
+}
+
+.Faixa1{
+    background-color: #583BBF;
+    height: 100vh;
+    padding: 1.625em 2.875em;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+
+    font-family: Monteserrat-Bold;
+    margin-bottom: 56px;
+}
+
+.hr-cab{
+    background-image: linear-gradient(#BA9D4C, #F3D991);
+    width: 0.25em;
+    height: 3.5em;
+    border-radius: 0.625em;
+    margin-right: 1.6875em;
+}
+.cabecalho svg{
+    margin-right: 0.8125em;
+}
+
+.cabecalho-txt{
+    color: white;
+    font-size: 2.25em;
+}
+
+.info-area{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0 , 0.12);
+}
+
+.room-msg{
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 50px;
+
+    padding-top: 52px;
+}
+
+.chat-info{
+    display: flex;
+    flex-direction: row;
+
+    font-family: Monteserrat-Bold;
+    color: white;
+}
+
+#name, #pasword{
+    font-family: Monteserrat-regular;
+    color: black;
+    font-weight: 400;
+    margin-left: 17px;
+
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: none;
+}
+
+.info-area{
+    padding: 0px 52px 0px 48px;
+}
+
+.refresh{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row-reverse;
+
+    margin-top: 13px;
+}
+
+.buttons button{
+    font-family: Monteserrat-Bold;
+    color: white;
+
+    border-radius: 20px;
+    background-color: #50B4BF;
+    border: none;
+    padding: 7px 20px;
+    margin: 0px 3.5px;
+    font: 16px;
+    line-height: 20px;
+}
+
+.room-name{
+    margin-bottom: 7px;
+    font-size: 24px;
+    padding-left: 4px;
+}
+
+.room-password{
+    margin-bottom: 13px;
+    font-size: 24px;
+}
+
+.msg-area{
+    margin-top: 63px;
+}
+
+.message-title{
+    font-family: Monteserrat-Bold;
+    color: white;
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+#digitacao{
+    resize: none;
+    width: 267px;
+    height: 214px;
+    left: 121px;
+    top: 419px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-family: Monteserrat-regular;
+}
+
+
+.send{
+    font-family: Monteserrat-Bold;
+    color: white;
+
+    border-radius: 20px;
+    background-color: #50B4BF;
+    border: none;
+    padding: 7px 20px;
+    font: 16px;
+    line-height: 20px;
+
+    margin-top: 8px;
+}
+
+.msg-area button{
+    text-align: right;
+    margin-left: 190px;
+    margin-bottom: 51px;
+}
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    background: rgba(192, 65, 224, 0.19);
+    border-radius: 3px;
+
+    width:830px;
+    height: 478px;
+}
+
+.chat-area{
+    margin-top: 21px;
+}
+
+.chat-area svg {
+    margin-bottom: 11px;
+}
+
+.message{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: Monteserrat-regular;
+}
+
+.name{
+    font-family: Monteserrat-Bold;
+}
