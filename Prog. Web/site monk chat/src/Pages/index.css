@@ -16,10 +16,10 @@ body{
 
 .Faixa1{
     background-color: #583BBF;
-    padding: 2em 2em 2.1em;
+    padding: 2em 2em 2.9em;
 }
 
-.cabecalho{
+.Header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,23 +28,23 @@ body{
     margin-bottom: 36px;
 }
 
-.hr-cab{
+.Line{
     background-image: linear-gradient(#BA9D4C, #F3D991);
     width: 0.25em;
     height: 3.5em;
     border-radius: 0.625em;
     margin-right: 1.6875em;
 }
-.cabecalho svg{
+.Header svg{
     margin-right: 0.8125em;
 }
 
-.cabecalho-txt{
+.header-title{
     color: white;
     font-size: 2.25em;
 }
 
-.info-area{
+.F1-Container{
     display: flex;
     flex-direction: row;
     background-color: rgba(0, 0, 0 , 0.12);
@@ -71,32 +71,25 @@ body{
     color: white;
 }
 
-#name, #pasword{
-    font-family: Monteserrat-regular;
-    color: black;
-    font-weight: 400;
-    margin-left: 17px;
-
-    padding: 5px 0px;
-    border-radius: 5px;
-    border: none;
+.room-name{
+    margin-bottom: 7px;
+    font-size: 24px;
+    padding-left: 4px;
 }
 
-.refresh{
-    display: flex;
-    flex-direction: row-reverse;
-
-    transition: 0.5s;
+.Nick{
+    margin-bottom: 13px;
+    font-size: 24px;
 }
 
-.buttons{
+.Room-op{
     display: flex;
     flex-direction: row-reverse;
 
     margin-top: 13px;
 }
 
-.buttons button{
+.Room-op button{
     font-family: Monteserrat-Bold;
     color: white;
 
@@ -111,15 +104,15 @@ body{
     transition: 0.5s;
 }
 
-.room-name{
-    margin-bottom: 7px;
-    font-size: 24px;
-    padding-left: 4px;
-}
+#name, #pasword{
+    font-family: Monteserrat-regular;
+    color: black;
+    font-weight: 400;
+    margin-left: 17px;
 
-.room-password{
-    margin-bottom: 13px;
-    font-size: 24px;
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: none;
 }
 
 .msg-area{
@@ -145,7 +138,7 @@ body{
 }
 
 
-.send{
+.send-button{
     font-family: Monteserrat-Bold;
     color: white;
 
@@ -157,11 +150,38 @@ body{
     line-height: 20px;
 
     margin-top: 8px;
+
+    transition: 0.5s;
 }
 
+.send-button:hover, .Room-op button:hover{
+    background-color: #3b97a1;
+   }   
+
 .msg-area button{
-    text-align: right;
     margin-left: 190px;
+}
+
+.chat-area{
+    margin-top: 21px;
+}
+
+.chat-area svg {
+    margin-bottom: 11px;
+}
+
+.refresh{
+    display: flex;
+    flex-direction: row-reverse;
+
+    transition: 0.5s;
+}
+
+.refresh svg{
+    transition: 1.2s;
+}
+.refresh svg:hover{
+    transform: rotate(360deg);
 }
 
 .chat{
@@ -171,7 +191,6 @@ body{
     border-radius: 3px;
 
     overflow-y: scroll;
-/*MELHORAR O BOX-SIZING*/
     width: 938px;
     height: 438px;
 
@@ -198,33 +217,12 @@ body{
 	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
 	background-color: #CBCBCB;
 }
-.chat-area{
-    margin-top: 21px;
-}
 
-.chat-area svg {
-    margin-bottom: 11px;
-}
 
 .message{
     color: white;
     font-family: Monteserrat-regular;
     margin-bottom: 11px;
-}
-
-.name{
-    font-family: Monteserrat-Bold;
-}
-
-.send:hover, .buttons button:hover{
- background-color: #3b97a1;
-}
-
-.refresh svg{
-    transition: 1.2s;
-}
-.refresh svg:hover{
-    transform: rotate(360deg);
 }
 
 @media (max-width: 1024px) {
@@ -233,20 +231,20 @@ body{
         padding: 1em 1em 1.1em;
     }
 
-    .cabecalho{
+    .Header{
         flex-direction: column;
     }
-    .cabecalho-txt{
+    .header-title{
         font-size: 32px;
     }
-    .cabecalho svg{
+    .Header svg{
         width: 62px;
     }    
-    .hr-cab{
+    .Line{
         display: none;
     }
 
-    .info-area{
+    .F1-Container{
         padding: 10px;
         margin-left: 0px;
         flex-direction: column;
@@ -255,7 +253,7 @@ body{
         width: 116%;
         padding: 0px;
     }
-    .room-name, .room-password{
+    .room-name, .Nick{
         padding: 0px;
         width: 104%;
         font-size: 20px;
@@ -277,12 +275,12 @@ body{
         margin-left: 20px;
         width: 74.491%;
     }
-    .buttons{
+    .Room-op{
         flex-direction: column;
         width: 104%;
     }
 
-    .buttons button{
+    .Room-op button{
         width: 95.278%;
         border-radius: 4px;
         margin: 0px 0px 5px 0px;
@@ -294,11 +292,11 @@ body{
     #digitacao{
         width: 98.09%;
     }
-    .message-typing{
+    .typing-area{
         width: 100%;
     }
 
-    .send{
+    .send-button{
         border-radius: 4px;
         width: 100%;
     }
