@@ -138,8 +138,6 @@ body{
     resize: none;
     width: 267px;
     height: 214px;
-    left: 121px;
-    top: 419px;
 
     background: #FFFFFF;
     border-radius: 5px;
@@ -182,7 +180,7 @@ body{
 
 .chat::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
 	border-radius: 10px;
 	background-color: #3E006F;
 }
@@ -197,7 +195,7 @@ body{
 .chat::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
 	background-color: #CBCBCB;
 }
 .chat-area{
@@ -231,8 +229,18 @@ body{
 
 @media (max-width: 1024px) {
 
+    .Faixa1{
+        padding: 1em 1em 1.1em;
+    }
+
     .cabecalho{
         flex-direction: column;
+    }
+    .cabecalho-txt{
+        font-size: 32px;
+    }
+    .cabecalho svg{
+        width: 62px;
     }    
     .hr-cab{
         display: none;
@@ -243,8 +251,66 @@ body{
         margin-left: 0px;
         flex-direction: column;
     }
-    .chat{
+    .chat-info, .room-info{
+        width: 116%;
+        padding: 0px;
+    }
+    .room-name, .room-password{
+        padding: 0px;
+        width: 104%;
+        font-size: 20px;
+        align-items: center;
+    }
+    .room-name{
+        margin-bottom: 5px;
+    }
+    .colon{
+        display: none;
+    }
+    #name{
+        margin: 0px;
+        margin-left: 24px;
+        width: 74.491%;
+    }
+    #pasword{
+        margin: 0px;
+        margin-left: 20px;
+        width: 74.491%;
+    }
+    .buttons{
+        flex-direction: column;
+        width: 104%;
+    }
+
+    .buttons button{
+        width: 95.278%;
+        border-radius: 4px;
+        margin: 0px 0px 5px 0px;
+    }
+
+    .msg-area{
+        width: 114.935%;
+    }
+    #digitacao{
+        width: 98.09%;
+    }
+    .message-typing{
         width: 100%;
+    }
+
+    .send{
+        border-radius: 4px;
+        width: 100%;
+    }
+    .msg-area button{
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .chat, .refresh{
+        width: 94.06%;
         padding: 26px 0px 10px 10px;
     }
 
