@@ -6,7 +6,7 @@ export default function Home(){
 
                 <div className="Header">
                     <div className="Logo">
-                        <img src="./assets/images/imagem_2021-08-02_212515.png" alt=""/>
+                        <img src={'./assets/images/logo1 1.png'} alt=""/>
                     </div>
                     <div className="Line"></div>   
                     <div className="header-title">MonkChat</div>
@@ -49,23 +49,6 @@ export default function Home(){
                         
                         <div className="chat">
                             <div className="message">(15:02:01) <b>Brunex</b> Entrou na Sala... </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
                             <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
                             <div className="message">(15:03:25) <b>Brunex</b> Saiu da Sala...</div>
                         </div>

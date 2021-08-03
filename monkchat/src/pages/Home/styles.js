@@ -3,8 +3,7 @@ import styled from "styled-components"
 const Faixa1 = styled.div`
 
     background-color: #583BBF;
-    padding: 2em 2em 4.4em;
-
+    padding: 2em 2em 3.3em;
 
 .Header{
     display: flex;
@@ -22,7 +21,7 @@ const Faixa1 = styled.div`
     border-radius: 0.625em;
     margin-right: 1.6875em;
 }
-.Header svg{
+.Header img{
     margin-right: 0.8125em;
 }
 
@@ -145,7 +144,7 @@ const Faixa1 = styled.div`
    }   
 
 .msg-area button{
-    margin-left: 11.875em;
+    margin-left: 8.5em;
 }
 
 .chat-area{
@@ -221,7 +220,7 @@ const Faixa1 = styled.div`
     .header-title{
         font-size: 2em;
     }
-    .Header svg{
+    .Header img{
         width: 3.875em;
     }    
     .Line{
