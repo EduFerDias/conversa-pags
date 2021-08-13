@@ -1,31 +1,24 @@
-import { Faixa1 } from './styles'
+import { Container } from "./Container-Styles";
+import { ChatButton } from "../outros/buttons-style";
+import { ChatInput } from "../outros/input";
+import { TypeBox } from "../outros/TextArea";
+import Chat from "../Chat/Chat"
 
-export default function Home(){
+export default function Conteudo(){
     return(
-            <Faixa1>
-
-                <div className="Header">
-                    <div className="Logo">
-                        <img src={'./assets/images/logo1 1.png'} alt=""/>
-                    </div>
-                    <div className="Line"></div>   
-                    <div className="header-title">MonkChat</div>
-                </div>
-
-                <div className="F1-Container">
-
+        <Container>
                     <div className="room-msg">
                         <div className="chat-info">
                             <div className="room-info">
                                 <div className="room-name">
-                                    Sala<span className="colon">:</span> <input type="text" id="name"/>
+                                    Sala<span className="colon">:</span> <ChatInput />
                                 </div>
                                 <div className="Nick">
-                                    Nick<span className="colon">:</span> <input type="text" id="pasword"/>
+                                    Nick<span className="colon">:</span> <ChatInput id="nickname"/>
                                 </div>
                                 <div className="Room-op">
-                                    <button>Entrar</button>
-                                    <button>Criar</button>
+                                    <ChatButton>Entrar</ChatButton>
+                                    <ChatButton>Criar</ChatButton>
                                 </div>
                             </div>
                         </div>
@@ -33,9 +26,9 @@ export default function Home(){
                         <div className="msg-area">
                             <div className="message-title">Mensagem<span className="colon">:</span></div>
                             <div className="typing-area">
-                                <textarea placeholder="Digite sua mensagem aqui!" id="digitacao"></textarea>
+                                <TypeBox placeholder="Digite sua mensagem aqui!" id="digitacao"></TypeBox>
                             </div>
-                            <button className="send-button">Enviar</button>  
+                            <ChatButton className="send-button">Enviar</ChatButton> 
                         </div>
                     </div>
                     <div className="chat-area">
@@ -47,15 +40,9 @@ export default function Home(){
                             </svg>
                         </div>
                         
-                        <div className="chat">
-                            <div className="message">(15:02:01) <b>Brunex</b> Entrou na Sala... </div>
-                            <div className="message">(15:02:21) <b>Brunex</b> Fala para <b>Todos:</b> Opa, Tudo bem ai? </div>
-                            <div className="message">(15:03:25) <b>Brunex</b> Saiu da Sala...</div>
-                        </div>
+                        <Chat />
                         
                     </div>    
-                </div>
-        </Faixa1>
-
+        </Container>
     );
 }
