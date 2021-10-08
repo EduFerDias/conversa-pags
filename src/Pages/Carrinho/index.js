@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react'
  
 import Cookies from 'js-cookie'
 import CarrinhoItem from './carrinhoItem'
+import Conteudo from './styled';
 
 export default function Carrinho(){
 
@@ -32,15 +33,17 @@ export default function Carrinho(){
     }
 
     return(
-        <div>
-            <h1 align="center">Carrinho</h1>
-            <Link to="/">Voltar</Link>
-            
-            <div className="items">
-                {produtos.map(item => (
-                    <CarrinhoItem key={item.id} info={item} onAlteration={alterarProduto} onRemove={removerProduto}/>
-                ))}
+        <Conteudo>
+            <div className="container">
+                <h1>Carrinho</h1>
+                <Link align="center" to="/">Voltar</Link>
+                
+                <div className="items">
+                    {produtos.map(item => (
+                        <CarrinhoItem key={item.id} info={item} onAlteration={alterarProduto} onRemove={removerProduto}/>
+                    ))}
+                </div>
             </div>
-        </div>
+        </Conteudo>
     );
 }

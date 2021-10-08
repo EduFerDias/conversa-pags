@@ -29,12 +29,12 @@ export default function Home (){
                 especificacoes: "Exelente qualidade, bom item decorativo para Suas Paredes!"
             },
             {
-                id:1,
-                nome:"Miniatura - Maclaren 2008 - MP4-23",
-                descricao:"Minatura do carro de formula 1 do ano 2008 da Maclaren",
-                imagem:"http://www.minimundi.com.br/cdn/imagens/produtos/det/miniatura-carro-formula-1-vodafone-mclaren-mercedes-mp4-23-keikki-kovalainen-saison-2008-1-43-minichamps-b66962423-021370_a.jpg",
+                id:3,
+                nome:"Miniatura - Maclaren 1988 - MP4-4",
+                descricao:"Minatura do carro de formula 1 do ano 1988 da Maclaren, campeão mundial com Ayrton Senna",
+                imagem:"https://http2.mlstatic.com/D_NQ_NP_690670-MLB25551652044_042017-O.jpg",
                 preco: 249.90,
-                especificacoes: "Miniatura de Boa Qualidade, Item de colecionador"
+                especificacoes: "Miniatura de Boa Qualidade, Item de colecionador, "
             }
         ]
         setCat(products)
@@ -50,7 +50,7 @@ export default function Home (){
                 </div>
 
                 <Link to="/contador">
-                <div className="buttons">
+                <div className="buttons2">
                     <button>Contador</button>
                 </div>
                 </Link>

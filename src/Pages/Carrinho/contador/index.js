@@ -8,8 +8,8 @@ const Container = styled.div`
     font-weight: 400;
 
     & > * {
-        margin: 5em;
-        background-color: #f5f5f5;
+        margin: 3em; 
+        background-color: #404040;
         padding: 0.3em 0.8em;
         user-select:none;
     }

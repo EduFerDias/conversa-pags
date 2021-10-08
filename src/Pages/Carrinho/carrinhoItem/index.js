@@ -25,12 +25,16 @@ export default function CarrinhoItem(props){
             </div>
 
             <div className="titulo">
-                {produto.titulo}
+                {
+                    produto.nome !== null && produto.nome.length > 29
+                            ? produto.nome.substr(0, 26) + '...'
+                            : produto.nome
+                }
             </div>
 
-            <div>
+            <div className="preco">
                 <span>Preço unitário</span><br />
-                {produto.preco}
+                R${produto.preco.toFixed(2)}
             </div>
 
             <div className="qtd">
