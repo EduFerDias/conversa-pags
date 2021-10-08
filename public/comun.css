@@ -1,0 +1,7 @@
+body{
+    margin: 0px;
+}
+
+a:visited, a:link, a{
+    text-decoration: none;
+}
